@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@mipmap/denglu_bg">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入校园卡号"
+        android:textSize="15dp"
+        android:id="@+id/RIDEditText"
+        android:layout_marginTop="146dp"
+        android:layout_marginRight="105dp"
+        android:layout_marginEnd="105dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入手机号"
+        android:textSize="15dp"
+        android:layout_below="@+id/RIDEditText"
+        android:layout_alignLeft="@+id/RIDEditText"
+        android:layout_alignStart="@+id/RIDEditText"
+        android:layout_marginTop="13dp"
+        android:id="@+id/RPhoneEditText"
+        android:inputType="phone"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码"
+        android:textSize="15dp"
+        android:layout_below="@+id/RPhoneEditText"
+        android:layout_alignLeft="@+id/RPhoneEditText"
+        android:layout_alignStart="@+id/RPhoneEditText"
+        android:layout_marginTop="14dp"
+        android:id="@+id/RPwdEditText"
+        android:inputType="numberPassword"/>
+
+    <TextView
+        android:id="@+id/IDTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="校园卡号:"
+        android:layout_alignBottom="@+id/RIDEditText"
+        android:layout_toLeftOf="@+id/RPhoneEditText"
+        android:layout_toStartOf="@+id/RPhoneEditText"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/RPhoneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手机号:"
+        android:layout_alignBaseline="@+id/RPhoneEditText"
+        android:layout_alignBottom="@+id/RPhoneEditText"
+        android:layout_alignLeft="@+id/IDTextView"
+        android:layout_alignStart="@+id/IDTextView"
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/RPwdTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/RPwdEditText"
+        android:layout_alignBottom="@+id/RPwdEditText"
+        android:layout_alignLeft="@+id/RPhoneTextView"
+        android:layout_alignStart="@+id/RPhoneTextView"
+        android:text="密     码:"
+        android:textSize="13dp" />
+
+    <Button
+        android:id="@+id/RsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RPwdEditText"
+        android:layout_marginTop="91dp"
+        android:layout_toEndOf="@+id/RPhoneTextView"
+        android:text="提交" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/IDTextView"
+        android:layout_alignLeft="@+id/IDTextView"
+        android:layout_alignStart="@+id/IDTextView"
+        android:layout_marginBottom="15dp"
+        android:text="用户名:" />
+
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignEnd="@+id/RIDEditText"
+        android:layout_alignLeft="@+id/RIDEditText"
+        android:layout_alignRight="@+id/RIDEditText"
+        android:layout_alignStart="@+id/RIDEditText"
+        android:hint="请输入账户"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/IDTextView"
+        android:layout_below="@+id/RPwdEditText"
+        android:text="校园卡密码:" />
+
+    <EditText
+        android:textSize="14sp"
+        android:id="@+id/spwd"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView9"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_alignEnd="@+id/RPwdEditText"
+        android:layout_alignStart="@+id/RPwdEditText"
+        android:hint="请输入校园卡密码"
+        android:inputType="textPassword" />
+
+</RelativeLayout>

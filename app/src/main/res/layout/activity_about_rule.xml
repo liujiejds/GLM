@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.admin.glm.AboutRule">
+
+    <com.siberiadante.titlelayoutlib.TitleBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:d_is_back_view="true"
+        app:d_left_image="@drawable/back"
+        app:d_title_layout_background="@color/white"
+        app:d_title_text="用户须知" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="361dp"
+        android:layout_gravity="center_vertical"
+        android:text="App使用注意事项
+
+注意:我们的app只支持运送价值在200元以下的物品，若执意使用此app代取200元以上的快件，对您造成的财产损失，全部由您个人承担。
+快件价格：
+正常3kg以下的：每件物品——1元
+   超出3kg以上的: 每超出1kg加收——1元（不满1kg，按1kg计算）。
+   支付为第三方网上支付
+二、联系客服：
+电话：15538813678" />
+</LinearLayout>

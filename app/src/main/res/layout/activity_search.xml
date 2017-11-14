@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.glm.Search"
+    android:orientation="vertical">
+    <com.siberiadante.titlelayoutlib.TitleBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:d_is_back_view="true"
+        app:d_title_text="订单查询"
+        app:d_title_layout_background="@color/white"
+        app:d_left_image="@drawable/back"/>
+    <WebView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></WebView>
+</LinearLayout>

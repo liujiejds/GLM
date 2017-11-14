@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@mipmap/denglu">
+
+
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="请输入校园卡号"
+    android:textSize="15dp"
+    android:id="@+id/RIDEditText"
+    android:layout_marginRight="115dp"
+    android:layout_marginEnd="115dp"
+    android:layout_above="@+id/RPhoneEditText"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/RPhoneEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入用户名"
+        android:inputType="text"
+        android:textSize="15dp"
+        android:layout_above="@+id/RPwdEditText"
+        android:layout_alignLeft="@+id/RIDEditText"
+        android:layout_alignStart="@+id/RIDEditText" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码"
+        android:textSize="15dp"
+        android:id="@+id/RPwdEditText"
+        android:inputType="numberPassword"
+        android:layout_marginBottom="22dp"
+        android:layout_above="@+id/RLoadButton"
+        android:layout_alignLeft="@+id/RPhoneEditText"
+        android:layout_alignStart="@+id/RPhoneEditText" />
+
+    <TextView
+        android:id="@+id/IDTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="校园卡号:"
+        android:layout_alignBaseline="@+id/RIDEditText"
+        android:layout_alignBottom="@+id/RIDEditText"
+        android:layout_toLeftOf="@+id/RPhoneEditText"
+        android:layout_toStartOf="@+id/RPhoneEditText"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/RPhoneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/RPhoneEditText"
+        android:layout_alignBottom="@+id/RPhoneEditText"
+        android:layout_alignLeft="@+id/IDTextView"
+        android:layout_alignStart="@+id/IDTextView"
+        android:text="用户名："
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/RPwdTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密码:"
+        android:textSize="13dp"
+        android:layout_alignBaseline="@+id/RPwdEditText"
+        android:layout_alignBottom="@+id/RPwdEditText"
+        android:layout_alignLeft="@+id/RPhoneTextView"
+        android:layout_alignStart="@+id/RPhoneTextView" />
+
+    <Button
+        android:onClick="doClick"
+        android:id="@+id/RLoadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登录"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/RPwdTextView"
+        android:layout_alignStart="@+id/RPwdTextView"
+        android:layout_marginBottom="45dp" />
+
+    <Button
+        android:onClick="doClick"
+        android:id="@+id/RegisterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/RLoadButton"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_toEndOf="@+id/RLoadButton"
+        android:layout_toRightOf="@+id/RLoadButton"
+        android:text="注册" />
+
+
+</RelativeLayout>
