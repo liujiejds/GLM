@@ -8,6 +8,8 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.SearchView;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,17 +39,35 @@ import cn.bmob.v3.listener.FindListener;
 
 public class MainF extends Fragment   {
     private ListView listView;
-    private SimpleAdapter simpleAdapter;
+    private MySimpleAdapter simpleAdapter;
     private List<Map<String,Object>> datalist;
     private int myPosition;
     private MyReceiver receiver;
     private boolean mainReceiverTag=false;
+    private android.widget.SearchView searchView;
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.main,container,false);
         listView=(ListView)view.findViewById(R.id.listView);
         datalist=new ArrayList<Map<String, Object>>();
+        searchView=view.findViewById(R.id.search_view);
+        searchView.setQueryHint("目的地关键字，例如：菊园，松园");
+        searchView.setOnQueryTextListener(new android.widget.SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                if (TextUtils.isEmpty(s)){
+                    listView.clearTextFilter();
+                }else {
+                    simpleAdapter.getFilter().filter(s);
+                }
+                return true;
+            }
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
+            }
+        });
 //      User user= BmobUser.getCurrentUser(User.class);
         BmobQuery<Data> query=new BmobQuery<>();
         query.include("user");
@@ -75,7 +95,7 @@ public class MainF extends Fragment   {
                   }
             }
         });
-        simpleAdapter=new SimpleAdapter(getContext(),datalist,R.layout.list_item,new String[]{"address","pay","name","userImage","time"},
+        simpleAdapter=new MySimpleAdapter(getContext(),datalist,R.layout.list_item,new String[]{"address","pay","name","userImage","time"},
                 new int[]{R.id.address,R.id.pay,R.id.name,R.id.userImage,R.id.time});
         listView.setAdapter(simpleAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
